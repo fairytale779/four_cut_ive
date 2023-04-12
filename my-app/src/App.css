@@ -1,0 +1,98 @@
+/* body태그 자체에 css 요소 부여 */
+.App {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.App::before {
+  content: "";
+  background-image: url("./../public/background.png");
+  background-size: cover;
+  opacity: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.container {
+  width: 290px;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    0deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(51, 51, 52, 1) 0%,
+    rgba(233, 233, 233, 1) 100%,
+    rgba(113, 135, 139, 1) 100%
+  );
+  height: 749px;
+  margin-top: 30px;
+  z-index: 1;
+}
+
+.photos {
+  margin-top: 7px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .photo-frame {
+  background-color: white;
+  margin: 10px 20px;
+  height: 150px;
+  background-size: cover;
+  position: relative;
+} */
+
+.photo-frame {
+  margin: 10px 20px;
+}
+
+/* 하단 영역 스타일링 */
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.f-title {
+  font-size: 25px;
+  font-weight: 900;
+  color: white;
+}
+
+.bottom_pic {
+  width: 250px;
+  position: relative;
+  bottom: 100px;
+  right: -50px;
+}
+.f-date {
+  font-size: 15px;
+  font-weight: 500;
+  color: white;
+  position: relative;
+  bottom: 179px;
+}
+
+.photo-description {
+  color: white;
+  background-color: black;
+  width: fit-content;
+  padding: 0 20px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 0;
+  transform: translate(-50%);
+  left: 50%;
+}
+
+.imgInput {
+  display: none;
+}
